@@ -2,7 +2,7 @@ public class Product {
     private long id; //id сделки
     private long customerId; // id покупателя
     private long supplierId; // id продавца
-    private long[] product; // Категория товара
+    private long[] product; // спсиок товара который продали
 
     public Product(long id, long customerId, long supplierId, long[] product) {
         this.id = id;

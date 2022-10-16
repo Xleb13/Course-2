@@ -2,7 +2,7 @@ public class Supplier extends Person{
 
     private long INN ; //ИНН
     private long OGRN; //ОГРН
-    public Supplier(long id, String name, int phonenumber, String email, long paymentdeteails, long INN, long OGRN) {
+    public Supplier(long id, String name, int phonenumber, String email, long paymentdeteails, long INN, String OGRN) {
         super(id, name, phonenumber, email, paymentdeteails, INN, OGRN);
     }
 

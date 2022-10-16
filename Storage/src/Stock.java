@@ -3,12 +3,14 @@ public class Stock {
     private String titile; // Название товара
     private double price; // Цена товара
     private StockCategories categories; // Категория товара
+    private long count; //количество товара
 
-    public Stock(long id, String titile, double price, StockCategories categories) {
+    public Stock(long id, String titile, double price, StockCategories categories, long count) {
         this.id = id;
         this.titile = titile;
         this.price = price;
         this.categories = categories;
+        this.count = count;
     }
 
     public long getId() {
@@ -41,5 +43,14 @@ public class Stock {
 
     public void setCategories(StockCategories categories) {
         this.categories = categories;
+    }
+
+
+    public long getCount() {
+        return count;
+    }
+
+    public void setCount(long count) {
+        this.count = count;
     }
 }

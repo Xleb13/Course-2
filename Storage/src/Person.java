@@ -13,6 +13,11 @@ public class Person {
         this.paymentdeteails = paymentdeteails;
     }
 
+    public Person(long id, String name, int phonenumber, String email, long paymentdeteails, long age, String gender) {
+    }
+    public Person(long id, String name, int phonenumber, String email, String jobtitle) {
+    }
+
     public long getId() {
         return id;
     }
