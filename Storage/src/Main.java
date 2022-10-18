@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Main {
@@ -9,22 +11,10 @@ public class Main {
 
     static ArrayList<StockWorker> stockWorkers = new ArrayList<>();
 
-    public static void main(String[] args) {
-        initData();
-        String productInfo = String.valueOf(getCountOfSoldProducts());
-        System.out.println(productInfo);
+    public static void main(String[] args) throws SQLException,ClassNotFoundException {
+
+
     }
-
-
-//получить общее количесвто проданных товаров
-    public static int getCountOfSoldProducts() {
-        int count = 0;
-        for (Product product : products) {
-            count += product.getProduct().length;
-        }
-        return count;
-    }
-
 
     public static void initData() {
         //продавцы
@@ -54,3 +44,4 @@ public class Main {
 
     }
 }
+
