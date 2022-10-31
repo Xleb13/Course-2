@@ -50,7 +50,7 @@ public class DataBaseHandlerPerson extends Config {
             statement = connection.createStatement();
             resultSet = statement.executeQuery("SELECT id_customer, name, phone_number, email, payment_details, date_of_birthday, gender FROM storage.customer");
 
-            System.out.println("Customer\n");
+            System.out.println("\nCustomer");
             while (resultSet.next()) {
                 int id_customer = resultSet.getInt(1);
                 String name = resultSet.getString(2);

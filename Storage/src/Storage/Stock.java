@@ -1,25 +1,34 @@
 package Storage;
 
 public class Stock {
-    private long id; // id товара
+    private int id; // id товара
     private String titile; // Название товара
-    private double price; // Цена товара
-    private StockCategories categories; // Категория товара
-    private long count; //количество товара
+    private int price; // Цена товара
+    private int count; //количество товара
 
-    public Stock(long id, String titile, double price, StockCategories categories, long count) {
+    enum StockCategories {
+        SmartPhones, //Мобильные телефоны
+        PCcomponents, //Комплектующие для пк
+        Appilance, //Бытовая техника
+        ProtectiveSystem, //Защитные системы
+        SpareParts, //Ремонтные детали
+    }
+
+    private StockCategories stockCategories; //Категория товара
+
+    public Stock(int id, String titile, int price, int count, StockCategories stockCategories) {
         this.id = id;
         this.titile = titile;
         this.price = price;
-        this.categories = categories;
         this.count = count;
+        this.stockCategories = stockCategories;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,28 +40,29 @@ public class Stock {
         this.titile = titile;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
-    public StockCategories getCategories() {
-        return categories;
-    }
-
-    public void setCategories(StockCategories categories) {
-        this.categories = categories;
-    }
-
-
-    public long getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(long count) {
+    public void setCount(int count) {
         this.count = count;
     }
+
+    public StockCategories getStockCategories() {
+        return stockCategories;
+    }
+
+    public void setStockCategories(StockCategories stockCategories) {
+        this.stockCategories = stockCategories;
+    }
+
+
 }
