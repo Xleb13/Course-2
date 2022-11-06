@@ -1,6 +1,6 @@
 package com.example.storage;
 
-import DBConnector.DataBaseHandlerPerson;
+import DBConnector.DataBaseHandlerStock;
 
 import java.io.IOException;
 import java.net.URL;
@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class Customer {
+public class Stock {
 
     @FXML
     private ResourceBundle resources;
@@ -43,11 +43,10 @@ public class Customer {
 
     @FXML
     void initialize() {
-        DataBaseHandlerPerson dbCustomer = new DataBaseHandlerPerson();
-        MenuCustomer.setOnAction(actionEvent -> {
-            dbCustomer.ConslusionOfCustomer();
+        DataBaseHandlerStock dbStock = new DataBaseHandlerStock();
+        MenuStock.setOnAction(actionEvent -> {
+            dbStock.ConslusionOfStock();
         });
-
 
 
 
@@ -55,6 +54,21 @@ public class Customer {
             MenuSupplier.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("Supplier.fxml"));
+            try{
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        MenuCustomer.setOnAction(actionEvent -> { //Открыть Меню Клиенты
+            MenuCustomer.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Customer.fxml"));
             try{
                 loader.load();
             } catch (IOException e) {
@@ -80,22 +94,6 @@ public class Customer {
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
-
-        MenuStock.setOnAction(actionEvent -> { //Открыть Меню Товар
-            MenuStock.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("Stock.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
     }
 
 }
-

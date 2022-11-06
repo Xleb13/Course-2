@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class Customer {
+public class Worker {
 
     @FXML
     private ResourceBundle resources;
@@ -43,12 +43,10 @@ public class Customer {
 
     @FXML
     void initialize() {
-        DataBaseHandlerPerson dbCustomer = new DataBaseHandlerPerson();
-        MenuCustomer.setOnAction(actionEvent -> {
-            dbCustomer.ConslusionOfCustomer();
+        DataBaseHandlerPerson dbStockWorkers = new DataBaseHandlerPerson();
+        MenuStockWorker.setOnAction(actionEvent -> {
+            dbStockWorkers.ConclusionOfStockWorkers();
         });
-
-
 
 
         MenuSupplier.setOnAction(actionEvent -> { //открыть меню Поставщики
@@ -66,10 +64,10 @@ public class Customer {
             stage.showAndWait();
         });
 
-        MenuStockWorker.setOnAction(actionEvent -> { //Открыть Меню Работники Склада
-            MenuStockWorker.getScene().getWindow().hide();
+        MenuCustomer.setOnAction(actionEvent -> { //Открыть Меню Клиенты
+            MenuCustomer.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("Worker.fxml"));
+            loader.setLocation(getClass().getResource("Customer.fxml"));
             try{
                 loader.load();
             } catch (IOException e) {
@@ -98,4 +96,3 @@ public class Customer {
     }
 
 }
-

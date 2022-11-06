@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #454545;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.storage.Customer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #454545;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.storage.Stock">
     <children>
         <AnchorPane layoutX="168.0" layoutY="52.0" prefHeight="541.0" prefWidth="727.0" style="-fx-background-color: #D5D5D5;" />
         <AnchorPane layoutX="3.0" layoutY="4.0" prefHeight="590.0" prefWidth="158.0" style="-fx-background-color: #616161; -fx-background-radius: 3;">
@@ -37,7 +37,7 @@
         </AnchorPane>
         <AnchorPane layoutX="168.0" layoutY="4.0" prefHeight="43.0" prefWidth="727.0" style="-fx-background-color: #616161; -fx-background-radius: 4;">
          <children>
-            <Label layoutX="315.0" layoutY="4.0" text="Клиенты" textFill="WHITE">
+            <Label layoutX="329.0" layoutY="4.0" text="Товар" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
